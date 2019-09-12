@@ -1,0 +1,25 @@
+package com.cognizant;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+	
+	ArrayList<UserDetails> stateList = new ArrayList<States>(Arrays.asList(new States(101, "kerala"),new States(102, "Karnataka"), new States(103, "Tamil Nadu")));
+	
+	public ArrayList<States> getStateList() {
+		return stateList;
+	}
+
+	public void setStateList(ArrayList<States> stateList) {
+		this.stateList = stateList;
+	}
+
+	public void addStates(States s) {
+		this.stateList.add(s);
+	}
+
+}
