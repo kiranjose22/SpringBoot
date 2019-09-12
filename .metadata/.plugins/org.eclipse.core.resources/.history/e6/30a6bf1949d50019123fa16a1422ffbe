@@ -35,12 +35,12 @@ public class Controller {
 	public void addUsers(@RequestBody UserDetails s) {
 		userService.addUserDetails(s);
 	}
-	@RequestMapping(method=RequestMethod.PUT,value = "/users/{id}")
+	@RequestMapping(method=RequestMethod.PUT,value = "/states/{id}")
 	public void updateUser(@RequestBody UserDetails s,@PathVariable int id){
 		userService.updateUser(s,id);
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE,value = "/users/{id}")
+	@RequestMapping(method = RequestMethod.DELETE,value = "/states/{id}")
 	public void deleteUser(@PathVariable int id) {
 		userService.deleteUser(id);
 	}

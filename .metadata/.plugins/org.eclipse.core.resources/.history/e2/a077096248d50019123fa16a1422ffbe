@@ -15,7 +15,7 @@ public class UserService {
 		return userList;
 	}
 
-	public void setUserList(ArrayList<UserDetails> userList) {
+	public void setStateList(ArrayList<UserDetails> userList) {
 		this.userList = userList;
 	}
 
@@ -36,8 +36,8 @@ public class UserService {
 		}
 	}
 	
-	public void deleteUser(int id) {
-		userList.removeIf(t-> t.getUserId()==id);
+	public void deleteState(int id) {
+		userList.removeIf(t->(toString().getUserid()==id);
 	}
 
 

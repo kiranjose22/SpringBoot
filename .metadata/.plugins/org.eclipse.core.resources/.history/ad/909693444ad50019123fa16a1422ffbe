@@ -31,11 +31,11 @@ public class Controller {
 		return userService.getUserList();
 	}
 	
-	@RequestMapping(method=RequestMethod.POST,value = "/users")
-	public void addUsers(@RequestBody UserDetails s) {
-		userService.addUserDetails(s);
-	}
-	@RequestMapping(method=RequestMethod.PUT,value = "/users/{id}")
+//	@RequestMapping(method=RequestMethod.POST,value = "/users")
+//	public void addUsers(@RequestBody UserDetails s) {
+//		userService.addUserDetails(s);
+//	}
+	@RequestMapping(method=RequestMethod.POST,value = "/users/{id}")
 	public void updateUser(@RequestBody UserDetails s,@PathVariable int id){
 		userService.updateUser(s,id);
 	}
