@@ -2087,3 +2087,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-09-18 16:25:59,583 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-09-18 16:25:59,584 [Worker-82: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Training\Documents\workspace-sts-3.9.9.RELEASE\MODSpring\src\test\resources
 2019-09-20 10:05:18,781 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-09-26 09:57:31,269 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
