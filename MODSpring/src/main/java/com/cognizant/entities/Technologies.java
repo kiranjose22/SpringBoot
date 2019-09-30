@@ -17,6 +17,11 @@ public class Technologies {
 	
 	
 	
+	public Technologies() {
+//		super();
+	}
+
+
 	public Technologies(String id, String technology, float fee) {
 		super();
 		this.id = id;

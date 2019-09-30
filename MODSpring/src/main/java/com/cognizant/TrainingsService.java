@@ -1,13 +1,13 @@
 package com.cognizant;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cognizant.entities.Trainings;
-import com.cognizant.entities.Users;
+//import com.cognizant.entities.Users;
 
 @Service
 public class TrainingsService {

@@ -12,6 +12,12 @@ public class MentorSkills {
 	private String name;
 	private String toc;
 	private String prerequisites;
+	
+	
+
+	public MentorSkills() {
+//		super();
+	}
 
 	public MentorSkills(int id, String name, String toc, String prerequisites) {
 		super();

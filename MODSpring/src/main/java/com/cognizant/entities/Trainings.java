@@ -1,11 +1,11 @@
 package com.cognizant.entities;
 
-import java.util.Set;
+//import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+//import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -20,8 +20,15 @@ public class Trainings {
 	@JoinColumn(name="technologies_id")
 	private Technologies technologies;
 
-	@ManyToMany(mappedBy = "trainings")
-	private Set<Users> users;
+//	@ManyToMany(mappedBy = "trainings")
+//	private Set<Users> users;
+
+	
+	public Trainings() {
+//		super();
+	}
+
+
 
 	public Trainings(String id, String status, int progress, Technologies technologies) {
 		super();
@@ -29,20 +36,21 @@ public class Trainings {
 		this.status = status;
 		this.progress = progress;
 		this.technologies = technologies;
-		//this.users = users;
+//		this.users = users; 
+		//,Set<Users> users
 	}
 	
 	
 
-	public Set<Users> getUsers() {
-		return users;
-	}
-
-
-
-	public void setUsers(Set<Users> users) {
-		this.users = users;
-	}
+//	public Set<Users> getUsers() {
+//		return users;
+//	}
+//
+//
+//
+//	public void setUsers(Set<Users> users) {
+//		this.users = users;
+//	}
 
 
 

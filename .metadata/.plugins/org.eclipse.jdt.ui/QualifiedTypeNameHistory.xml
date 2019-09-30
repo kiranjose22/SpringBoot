@@ -16,9 +16,9 @@
 <fullyQualifiedTypeName name="com.example.demo.UserDetails"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="com.cognizant.entities.Users"/>
 <fullyQualifiedTypeName name="com.cognizant.TrainingsService"/>
 <fullyQualifiedTypeName name="com.cognizant.TrainingsRepository"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.cognizant.entities.Trainings"/>
+<fullyQualifiedTypeName name="com.cognizant.entities.Users"/>
 </qualifiedTypeNameHistroy>

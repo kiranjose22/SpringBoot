@@ -30,6 +30,12 @@ public class TrainerDetails {
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "trainerdetails_id")
 	private Set<MentorSkills> mentorSkills;
+	
+	
+
+	public TrainerDetails() {
+//		super();
+	}
 
 	public TrainerDetails(Users user, int experience, String timeZone, String timeSlot, String materialType,
 			String linkedinUrl, Set<MentorSkills> mentorSkills) {

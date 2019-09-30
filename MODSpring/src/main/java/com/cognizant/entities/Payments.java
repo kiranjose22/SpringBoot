@@ -17,6 +17,7 @@ public class Payments {
 //	@ManyToOne
 //	private Users paidBy;
 
+	
 	public Payments(int id, String txnType, double amount, String remarks, String trainingId,
 			String paidTo) {
 		super();
@@ -28,6 +29,10 @@ public class Payments {
 		//this.paidBy = paidBy;
 		this.paidTo = paidTo;
 	}
+
+	public Payments() {
+//	super();
+}
 
 	public int getId() {
 		return id;
