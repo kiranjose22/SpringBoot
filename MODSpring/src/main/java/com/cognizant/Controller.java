@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cognizant.entities.SearchResult;
 import com.cognizant.entities.Trainings;
 import com.cognizant.entities.Users;
 
@@ -21,6 +22,9 @@ public class Controller {
 	
 	@Autowired
 	TrainingsService trainingsService;
+	
+	@Autowired
+	SearchService searchService;
 	
 	@RequestMapping("")
 	public String hi() {
@@ -40,6 +44,11 @@ public class Controller {
 	@RequestMapping("/trainings")
 	public ArrayList<Trainings> getTrainingList(){
 		return trainingsService.getTrainingsList();
+	}
+	
+	@RequestMapping("/results")
+	public ArrayList<SearchResult> getResultList(){
+		return searchService.getResultList();
 	}
 	
 	@RequestMapping(method=RequestMethod.POST,value = "/trainings")

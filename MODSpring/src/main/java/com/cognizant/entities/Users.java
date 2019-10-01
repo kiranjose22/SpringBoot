@@ -15,20 +15,21 @@ import javax.persistence.JoinColumn;
 @Entity
 public class Users {
 	@Id
-	private String userMail;
+	private String email;
 	private String userName;
 	private String password;
 	private String status;
 	private String role;
+	private String phone;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "users_trainings", joinColumns = {
-			@JoinColumn(referencedColumnName = "userMail") }, inverseJoinColumns = {
+			@JoinColumn(referencedColumnName = "email") }, inverseJoinColumns = {
 					@JoinColumn(referencedColumnName = "id") })
 	private Set<Trainings> trainings;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="users_userMail")
+	@JoinColumn(name="users_email")
 	private Set<Payments> payments;
 	
 	@OneToOne(mappedBy="user")
@@ -40,16 +41,34 @@ public class Users {
 		
 	}
 
-	public Users(String userMail, String userName, String password, String status, String role,
+	public Users(String email, String userName, String password, String status, String role,String phone,
 			Set<Trainings> trainings, Set<Payments> payments) {
 		super();
-		this.userMail = userMail;
+		this.email = email;
 		this.userName = userName;
 		this.password = password;
 		this.status = status;
 		this.role = role;
 		this.trainings = trainings;
 		this.payments = payments;
+		this.phone = phone;
+	}
+
+	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public TrainerDetails getTrainerDetails() {
+		return trainerDetails;
+	}
+
+	public void setTrainerDetails(TrainerDetails trainerDetails) {
+		this.trainerDetails = trainerDetails;
 	}
 
 	public Set<Payments> getPayments() {
@@ -76,12 +95,12 @@ public class Users {
 		this.status = status;
 	}
 
-	public String getUserMail() {
-		return userMail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUserMail(String userMail) {
-		this.userMail = userMail;
+	public void setEmail(String userMail) {
+		this.email = userMail;
 	}
 
 	public String getUserName() {
