@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cognizant.entities.SearchResult;
+import com.cognizant.entities.TrainerDetails;
 import com.cognizant.entities.Trainings;
 import com.cognizant.entities.Users;
 
@@ -57,7 +58,9 @@ public class Controller {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST,value = "/users")
-	public void addUsers(@RequestBody Users s) {
+	public void addUsers(@RequestBody MentorSignUpModel s) {
+		
+//		System.out.println(s.getTrainerDetails()+"hi");
 		userService.addUserDetails(s);
 	}
 	@RequestMapping(method=RequestMethod.PUT,value = "/users/{id}")

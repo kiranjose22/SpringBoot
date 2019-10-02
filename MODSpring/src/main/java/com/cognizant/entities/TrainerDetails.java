@@ -16,36 +16,129 @@ import javax.persistence.OneToOne;
 public class TrainerDetails {
 
 	@Id
-	@GeneratedValue
-	private int id;
-	@OneToOne
-	@JoinColumn(name = "trainerdetails_user")
-	private Users user;
+//	@GeneratedValue
+	private String email;
+//	@OneToOne
+//	@JoinColumn(name = "trainerdetails_user")
+//	private Users user;
 	private int experience;
-	private String timeZone;
-	private String timeSlot;
-	private String materialType;
-	private String linkedinUrl;
+	private String timezone;
+	private String timeslot;
+	//private String materialType;
+	private String linkedin;
+	// private Set<String>skills;
+	private boolean videos;
+	private boolean blogs;
+	private boolean ppts;
+	private boolean demos;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "trainerdetails_id")
 	private Set<MentorSkills> mentorSkills;
-	
-	
 
 	public TrainerDetails() {
 //		super();
 	}
 
+//	public Set<String> getSkills() {
+//		return skills;
+//	}
+//
+//
+//
+//	public void setSkills(Set<String> skills) {
+//		this.skills = skills;
+//	}
+
+//
+//
+//	public boolean isVideos() {
+//		return videos;
+//	}
+//
+//
+//
+//	public void setVideos(boolean videos) {
+//		this.videos = videos;
+//	}
+//
+//
+//
+//	public boolean isBlogs() {
+//		return blogs;
+//	}
+//
+//
+//
+//	public void setBlogs(boolean blogs) {
+//		this.blogs = blogs;
+//	}
+//
+//
+//
+//	public boolean isPpts() {
+//		return ppts;
+//	}
+//
+//
+//
+//	public void setPpts(boolean ppts) {
+//		this.ppts = ppts;
+//	}
+//
+//
+//
+//	public boolean isDemos() {
+//		return demos;
+//	}
+//
+//
+//
+//	public void setDemos(boolean demos) {
+//		this.demos = demos;
+//	}
+
+	public boolean getVideos() {
+		return videos;
+	}
+
+	public void setVideos(boolean videos) {
+		this.videos = videos;
+	}
+
+	public boolean getBlogs() {
+		return blogs;
+	}
+
+	public void setBlogs(boolean blogs) {
+		this.blogs = blogs;
+	}
+
+	public boolean getPpts() {
+		return ppts;
+	}
+
+	public void setPpts(boolean ppts) {
+		this.ppts = ppts;
+	}
+
+	public boolean getDemos() {
+		return demos;
+	}
+
+	public void setDemos(boolean demos) {
+		this.demos = demos;
+	}
+
 	public TrainerDetails(Users user, int experience, String timeZone, String timeSlot, String materialType,
 			String linkedinUrl, Set<MentorSkills> mentorSkills) {
 		super();
-		this.user = user;
+		// this.user = user;
 		this.experience = experience;
-		this.timeZone = timeZone;
-		this.timeSlot = timeSlot;
-		this.materialType = materialType;
-		this.linkedinUrl = linkedinUrl;
+		this.timezone = timeZone;
+		this.timeslot = timeSlot;
+	//	this.materialType = materialType;
+		this.linkedin = linkedinUrl;
 		this.mentorSkills = mentorSkills;
 	}
 
@@ -57,21 +150,21 @@ public class TrainerDetails {
 		this.mentorSkills = mentorSkills;
 	}
 
-	public int getId() {
-		return id;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setEmail(String id) {
+		this.email = id;
 	}
 
-	public Users getUser() {
-		return user;
-	}
-
-	public void setUser(Users user) {
-		this.user = user;
-	}
+//	public Users getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(Users user) {
+//		this.user = user;
+//	}
 
 	public int getExperience() {
 		return experience;
@@ -81,36 +174,36 @@ public class TrainerDetails {
 		this.experience = experience;
 	}
 
-	public String getTimeZone() {
-		return timeZone;
+	public String getTimezone() {
+		return timezone;
 	}
 
-	public void setTimeZone(String timeZone) {
-		this.timeZone = timeZone;
+	public void setTimezone(String timeZone) {
+		this.timezone = timeZone;
 	}
 
-	public String getTimeSlot() {
-		return timeSlot;
+	public String getTimeslot() {
+		return timeslot;
 	}
 
-	public void setTimeSlot(String timeSlot) {
-		this.timeSlot = timeSlot;
+	public void setTimeslot(String timeSlot) {
+		this.timeslot = timeSlot;
 	}
 
-	public String getMaterialType() {
-		return materialType;
+//	public String getMaterialType() {
+//		return materialType;
+//	}
+//
+//	public void setMaterialType(String materialType) {
+//		this.materialType = materialType;
+//	}
+
+	public String getLinkedin() {
+		return linkedin;
 	}
 
-	public void setMaterialType(String materialType) {
-		this.materialType = materialType;
-	}
-
-	public String getLinkedinUrl() {
-		return linkedinUrl;
-	}
-
-	public void setLinkedinUrl(String linkedinUrl) {
-		this.linkedinUrl = linkedinUrl;
+	public void setLinkedin(String linkedinUrl) {
+		this.linkedin = linkedinUrl;
 	}
 
 }

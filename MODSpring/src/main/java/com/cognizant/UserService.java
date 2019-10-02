@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cognizant.entities.TrainerDetails;
 import com.cognizant.entities.Users;
 
 @Service
@@ -13,6 +14,8 @@ public class UserService {
 
 	@Autowired
 	private UserRepository ur;
+	@Autowired
+	private TrainerDetailsRepository tdr;
 
 	
 
@@ -32,8 +35,27 @@ public class UserService {
 //		this.userList = userList;
 //	}
 //
-	public void addUserDetails(Users s) {
-		ur.save(s);
+	public void addUserDetails(MentorSignUpModel s) {
+		Users user = new Users();
+		TrainerDetails trainerDetails = new TrainerDetails();
+		trainerDetails.setEmail(s.getEmail());
+		trainerDetails.setBlogs(s.isBlogs());
+		trainerDetails.setDemos(s.isDemos());
+		trainerDetails.setExperience(s.getExperience());
+		trainerDetails.setLinkedin(s.getLinkedin());
+		trainerDetails.setPpts(s.isPpts());
+		trainerDetails.setTimeslot(s.getTimeslot());
+		trainerDetails.setTimezone(s.getTimezone());
+		trainerDetails.setVideos(s.isVideos());
+		tdr.save(trainerDetails);
+		user.setEmail(s.getEmail());
+		user.setPassword(s.getPassword());
+		user.setPhone(s.getPhone());
+		user.setRole(s.getRole());
+		user.setStatus(s.getStatus());
+		user.setTrainerDetails(trainerDetails);
+		user.setUserName(s.getUserName());
+		ur.save(user);
 	}
 
 //	

@@ -29,19 +29,20 @@ public class Users {
 	private Set<Trainings> trainings;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="users_email")
+	@JoinColumn(name = "users_email")
 	private Set<Payments> payments;
-	
-	@OneToOne(mappedBy="user")
+
+	@OneToOne
+	@JoinColumn(name = "mentor_id")
 	private TrainerDetails trainerDetails;
-	
-	
+//	(mappedBy="user")	
+//	(cascade = CascadeType.ALL)	
 
 	public Users() {
-		
+
 	}
 
-	public Users(String email, String userName, String password, String status, String role,String phone,
+	public Users(String email, String userName, String password, String status, String role, String phone,
 			Set<Trainings> trainings, Set<Payments> payments) {
 		super();
 		this.email = email;
@@ -54,7 +55,6 @@ public class Users {
 		this.phone = phone;
 	}
 
-	
 	public String getPhone() {
 		return phone;
 	}
