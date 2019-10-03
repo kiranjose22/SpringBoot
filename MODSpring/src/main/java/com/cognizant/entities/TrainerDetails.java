@@ -1,5 +1,6 @@
 package com.cognizant.entities;
 
+import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -31,6 +32,9 @@ public class TrainerDetails {
 	private boolean blogs;
 	private boolean ppts;
 	private boolean demos;
+	private Date startdate;
+	private Date enddate;
+	
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "trainerdetails_id")
@@ -97,9 +101,27 @@ public class TrainerDetails {
 //	public void setDemos(boolean demos) {
 //		this.demos = demos;
 //	}
+	
+	
 
 	public boolean getVideos() {
 		return videos;
+	}
+
+	public Date getStartdate() {
+		return startdate;
+	}
+
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+
+	public Date getEnddate() {
+		return enddate;
+	}
+
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
 	}
 
 	public void setVideos(boolean videos) {

@@ -38,8 +38,13 @@ public class Controller {
 	}
 	
 	@RequestMapping("/users")
-	public ArrayList<Users> getList(){
+	public ArrayList<MentorSignUpModel> getList(){
 		return userService.getUserList();
+	}
+	
+	@RequestMapping("/users/{id}")
+	public Users getUserList(@PathVariable String id){
+		return userService.getUser(id);
 	}
 	
 	@RequestMapping("/trainings")
@@ -60,7 +65,7 @@ public class Controller {
 	@RequestMapping(method=RequestMethod.POST,value = "/users")
 	public void addUsers(@RequestBody MentorSignUpModel s) {
 		
-//		System.out.println(s.getTrainerDetails()+"hi");
+		System.out.println("at controller"+s.getSkills());
 		userService.addUserDetails(s);
 	}
 	@RequestMapping(method=RequestMethod.PUT,value = "/users/{id}")

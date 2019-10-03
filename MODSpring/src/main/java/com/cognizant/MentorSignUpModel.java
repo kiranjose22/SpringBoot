@@ -1,6 +1,10 @@
 package com.cognizant;
 
+import java.sql.Date;
 import java.util.List;
+import java.util.Set;
+
+import com.cognizant.entities.Skills;
 
 public class MentorSignUpModel {
 	private boolean blogs;
@@ -12,20 +16,37 @@ public class MentorSignUpModel {
 	private String phone;
 	private boolean ppts;
 	private String role;
-	private List<String> skills;
+	private Set<String> skills;
 	private String status;
 	private String timeslot;
 	private String timezone;
 	private String userName;
 	private boolean videos;
+	private Date startdate;
+	private Date enddate;
 	
 	
 	
 	
-	public List<String> getSkills() {
+	
+	
+	
+	public Date getStartdate() {
+		return startdate;
+	}
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+	public Date getEnddate() {
+		return enddate;
+	}
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+	public Set<String> getSkills() {
 		return skills;
 	}
-	public void setSkills(List<String> skills) {
+	public void setSkills(Set<String> skills) {
 		this.skills = skills;
 	}
 	public MentorSignUpModel() {

@@ -37,10 +37,27 @@ public class Users {
 	private TrainerDetails trainerDetails;
 //	(mappedBy="user")	
 //	(cascade = CascadeType.ALL)	
+	
+	@ManyToMany
+	private Set<Skills> skills;
 
 	public Users() {
 
 	}
+	
+	
+
+	public Set<Skills> getSkills() {
+		return skills;
+	}
+
+
+
+	public void setSkills(Set<Skills> skills) {
+		this.skills = skills;
+	}
+
+
 
 	public Users(String email, String userName, String password, String status, String role, String phone,
 			Set<Trainings> trainings, Set<Payments> payments) {
