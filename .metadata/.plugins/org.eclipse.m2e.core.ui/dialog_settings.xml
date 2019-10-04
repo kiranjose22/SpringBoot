@@ -76,8 +76,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="/Users/kiranjose/Downloads/SpringBoot/MODSpring"/>
 			<item value="D:\SpringBoot\MODSpring"/>
+			<item value="/Users/kiranjose/Downloads/SpringBoot/MODSpring"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
